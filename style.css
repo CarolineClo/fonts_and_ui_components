@@ -1,0 +1,398 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Color Properties */
+:root {
+  --color-darker: rgb(1, 28, 34);
+  --color-dark: rgb(1, 38, 41);
+  --color-light: rgb(242, 217, 222);
+  --color-accent: rgb(85, 43, 73);
+  --color-lighter: rgb(245, 247, 250);
+  /* you could add an accent color for CTAs and anchor tags ;-) */
+  --font-header: "Space Grotesk", sans-serif;
+  --font-main: "Montserrat", sans-serif;
+}
+
+/* Fonts */
+html {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-darker);
+}
+
+.logo {
+  font-family: var(--font-header);
+  font-weight: 600;
+  font-size: 1.56rem;
+}
+
+a {
+  font-family: var(--font-main);
+  color: var(--color-light);
+  text-decoration: underline;
+  line-height: 1.53rem;
+}
+
+h1 {
+  font-family: var(--font-header);
+  font-weight: 400;
+  font-size: 3.052rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-family: var(--font-header);
+  font-weight: 400;
+  font-size: 1.95rem;
+  margin: 1.56rem 0;
+}
+
+h3 {
+  font-family: var(--font-main);
+  font-size: 1.53rem;
+  font-weight: 500;
+}
+
+p {
+  font-family: var(--font-main);
+  color: var(--color-dark);
+  font-size: 1rem;
+  line-height: 1.56;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+  border-radius: 2px;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.light_button {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 250px;
+  height: 2rem;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: var(--color-lighter);
+  border-color: var(--color-light);
+  color: var(--color-dark);
+  margin-bottom: 0.41rem;
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 1rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-darker);
+}
+
+nav a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-dark);
+}
+
+.header_text {
+  width: 40vw;
+  min-width: 300px;
+}
+
+.header_text h1 {
+  color: var(--color-light);
+}
+
+.header_text p {
+  color: var(--color-lighter);
+}
+
+.header_graphics {
+  width: 35vw;
+  height: 35vw;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: var(--color-darker);
+  margin: 1rem;
+}
+
+/* Sections */
+#intro {
+  display: flex;
+  min-height: 80vh;
+  padding: 0px 15rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-light);
+}
+
+.intro_text {
+  width: 40vw;
+  min-width: 450px;
+}
+
+.info_text p {
+  margin-bottom: 1rem;
+}
+
+.intro_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: var(--color-dark);
+  margin: 1rem;
+}
+
+#cards {
+  min-height: 80vh;
+  padding: 5rem 2rem;
+  background-color: var(--color-lighter);
+}
+
+#cards h2 {
+  margin-bottom: 0.8rem;
+}
+
+#card_container {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0.8rem 0rem rgb(0, 0, 0, 8%);
+  background-color: var(--color-lighter);
+}
+
+.card_image {
+  width: 100%;
+  object-fit: cover;
+  height: 50%;
+  order: 1;
+  border-radius: 6px;
+}
+
+.card_name {
+  order: 2;
+  width: 100%;
+}
+
+.card_title {
+  order: 3;
+  width: 100%;
+  font-weight: 600;
+}
+
+.card_slogan {
+  order: 4;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.card p {
+  line-height: 1.25rem;
+  width: 100%;
+}
+
+.card_mail {
+  width: 100%;
+  order: 5;
+}
+
+.card_mail a {
+  color: var(--color-darker);
+  text-decoration: underline;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.card input {
+  width: 47%;
+  height: 2rem;
+  background-color: var(--color-lighter);
+  border: solid rgb(0, 0, 0, 8%);
+  border-radius: 18px;
+  align-self: flex-start;
+  padding: 0.5rem;
+  order: 6;
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.card input.card_button_positive {
+  color: white;
+  background-color: var(--color-accent);
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+#info {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light);
+}
+
+.info_text {
+  width: 60vw;
+  min-width: 300px;
+}
+
+#contact {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-darker);
+}
+
+footer h2,
+footer h3 {
+  color: var(--color-lighter);
+}
+
+footer a {
+  color: var(--color-light);
+}
+
+footer section {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  .header_text {
+    width: 89vw;
+  }
+
+  h1 {
+    font-size: 2.44rem;
+  }
+
+  button {
+    display: block;
+  }
+
+  #intro {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 1.56rem;
+  }
+
+  .intro_text {
+    width: 89vw;
+    min-width: 300px;
+  }
+
+  #cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+  }
+
+  .cards_text {
+    width: 89vw;
+    min-width: 300px;
+  }
+
+  #card_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 89vw;
+    min-width: 300px;
+    gap: 1rem;
+  }
+
+  #info {
+    padding: 0;
+  }
+
+  .info_text {
+    width: 89vw;
+    margin: 1rem 0;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
